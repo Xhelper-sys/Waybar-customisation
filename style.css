@@ -1,0 +1,87 @@
+#waybar{
+  background-color: transparent;
+  font-family: 'JetBrains Mono';
+}
+
+.modules-left, 
+.modules-center,
+.modules-right{
+  background-color: rgba(59, 59, 59, 0.6);
+  color: white;
+  margin: 10px 0px;
+}
+
+
+
+.modules-left{
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.modules-center{
+  padding-top:3px;
+  padding-bottom: 3px;
+}
+
+.modules-right{
+
+}
+
+#workspaces {
+  background-color: rgb(1, 103, 23);
+  margin-right: 12px;
+}
+
+#workspaces button{
+  color: white;
+  padding: 0px 6px;
+}
+
+#workspaces button.focused{
+  font-size: 16px;
+  background-color: rgb(1, 116, 26);
+  border: 2px solid rgb(1, 103, 23);
+  border-radius: 5px;
+}
+
+#workspaces button.focused:hover{
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -3px transparent; 
+}
+
+#workspaces button:hover{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px transparent; 
+    border-bottom: 2px solid #ffffff; 
+}
+
+#workspaces button:active,
+#workspaces button.focused:active{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#window {
+  color:white;
+}
+
+#language {
+  color: white;
+  margin-left: -30px;
+}
+
+#temperature{
+  padding: 0px 10px;
+  background-color: rgb(0, 32, 7);
+  font-size: 13px;
+}
+
+#temperature.warning{
+  color:orange;
+}
+
+#temperature.critical{
+  color:red;
+}
+
+

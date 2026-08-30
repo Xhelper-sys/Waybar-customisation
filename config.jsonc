@@ -1,0 +1,87 @@
+{
+  "position": "top",
+  "output":"eDP-1",
+  "name":"hello",
+  
+  "modules-left":[
+    "sway/workspaces", 
+    "sway/window"
+  ],
+
+  "modules-center":[
+    "sway/language", 
+    "temperature", 
+    "memory", 
+    "cpu", 
+    "custom/usersession", 
+    "clock",
+    "network",
+    "bluetooth",
+    "custom/notification"
+  ],
+  
+  "modules-right":[
+    "pulseaudio",
+    "custom/brightness",
+    "battery"
+  ],
+
+
+  // workspaces 
+
+  "sway/workspaces":{
+    "all-outputs":false,
+    "format":"{icon}",
+     "format-icons": {
+      "default": "",
+      "focused": ""
+    },
+    "disable-scroll":false,
+    "everse-scroll":false,
+    "disable-click":false,
+    "current-only":false,
+    "format-window-separator": " | "
+  },
+
+  // hyprland/window
+
+  "sway/window":{
+    "format":"{title}",
+    "max-length":28,
+    "separate-outputs":true,
+    "fallback":"Nothing",
+    "icon":true,
+    "icon-size": 15,
+    "expand": false
+  },
+
+  // language
+
+  "sway/language":{
+    "format":"{short}"
+    // Not work with the css atribut:value (margin:-?px)
+    // "hide-single-layout":false,
+    // "tooltip":true,
+    //"tooltip-format":"{long}"
+  },
+
+  // temperature
+
+  "temperature":{
+    "warning-threshold":80,
+    "critical-threshold":95,
+    "interval":10,
+    "format-warning":"{icon} {temperatureC}°C",
+    "format-critical":"{icon} {temperatureC}°C",
+    "format":"󱃃 {temperatureC}°C",
+    "format-icons": [
+      "󰸁",
+      "󱃂"
+    ],
+    "tooltip-format":"{temperatureC}°C",
+    "justify":"center",
+    "tooltip":true,
+    "expend":false
+  }
+
+}
