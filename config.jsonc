@@ -128,11 +128,11 @@
 		  "on-scroll"        : 1,
 		  "on-click-right"   : "mode",
 		  "format": {
-			  "months":     "<span color='#ffead3'><b>{}</b></span>",
-			  "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+			  "months":     "<span color='#98d549'><b>{}</b></span>",
+			  "days":       "<span color='#0abd31'><b>{}</b></span>",
 			  "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-			  "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-			  "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+			  "weekdays":   "<span color='#bdb70a'><b>{}</b></span>",
+			  "today":      "<span color='#fe3c3c'><b><u>{}</u></b></span>"
 		  }
 	  }
   },
@@ -171,6 +171,77 @@
 
   // bluetooth
 
-  "bluetooth":{}
+  "bluetooth":{
+    "controller":"archlinuxmus",
+    "format":"󰂱",
+    "format-disabled":"<span color='#a80f0f'>󰂴</span>",
+    "format-off":"<span color='##fe3c3c'>󰂲</span>",
+    "format-connected":"󰂱",
+    "format-on":"󰂱",
+    "format-no-controller":"<span color='#fdd937'></span>",
+    "justify":"center",
+    "tooltip":true,
+    "tooltip-format-connected":"<span color='#0ABD31'>{controller_alias}</span>\t<span color='#98D549'>{controller_address}</span>\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "<span color='#0ABD31'>{device_alias}</span>\t\t<span color='#98D549'>{device_address}</span>",
+    "tooltip-format-off":"<span color='##fe3c3c'>{controller_alias}\t{controller_address}</span>",
+    "tooltip-format-on":"<span color='##3c8dfe'>{controller_alias}\t{controller_address}</span>",
+    "tooltip-format-disabled":"<span color='#a80f0f'>{controller_alias}\t{controller_address}</span>",
+    "tooltip-format-no-controller":"<span color='#fdd937'>no controller</span>"
+  },
+
+  // notification
+
+  "custom/notification":{
+    "format":""
+  },
+
+
+  // song 
+  
+  "pulseaudio":{
+    "format":"󰋋 {volume}%",
+    "format-bluetooth":"󰗾 {volume}%",
+    "format-muted":"<span color='#c5c5c5'></span>",
+    "format-source":"󰋋 {volume}%",
+    "format-source-muted":"<span color='#c5c5c5'></span>",
+    "justify":"center",
+    "on-click":"pactl set-sink-mute 0 toggle",
+    "tooltip":true,
+    "tooltip-format":"<span color='#0ABD31'>Pulseaudio port's (output):</span> <span color='#98D549'>{desc}</span>\n\n<span color='#0ABD31'>Output:</span> <span color='#98D549'>{volume}%</span>\n\n<span color='#0ABD31'>Input:</span> <span color='#98D549'>{source_volume}%</span>\n\n<span color='#0ABD31'>Pulseaudio port's (input):</span><span color='#98D549'> {source_desc}</span>",
+    "max-volume":153
+  },
+
+  // custom/brightness
+
+  "custom/brightness":{
+    "exec":"$HOME/.config/waybar/script-custom/brightness.sh",
+    "return-type":"json",
+    "hide-empty-text":true,
+    "interval":40,
+    "format":"{icon} {percentage}%",
+    "format-icons":["🌑", "🌘", "🌗", "🌖", "🌕"]
+  },
+
+  // battery
+
+  "battery":{
+    "design-capacity":false,
+    "full-at-plugged":false,
+    "interval":60,
+    "format":"{icon} {capacity}%",
+    "format-icons":[
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󱟢"
+    ]
+  }
 
 }

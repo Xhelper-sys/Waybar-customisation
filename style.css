@@ -99,7 +99,7 @@
 #custom-archlogo {
   padding-left: 10px; /*temp*/
   padding-right: 12px; /*temp*/
-  background-color: rgb(152, 213, 73);
+  background-color: rgb(110, 213, 73);
   font-size: 18px;
   color: black;
 }
@@ -123,3 +123,35 @@
   font-size: 10px;
 }
 
+#bluetooth {
+  padding-left: 5px; /*temp*/
+  padding-right: 10px; /*temp*/
+  background-color: rgb(0, 32, 7);
+  font-size: 14px;
+}
+
+#custom-notification {
+  padding-left: 3px; /*temp*/
+  padding-right: 13px; /*temp*/
+  margin-bottom: -1px;
+  background-color: rgb(0, 32, 7);
+  font-size: 12px;
+}
+
+#pulseaudio{
+  padding: 0px 10px; /*temp*/
+  background-color: rgb(0, 32, 7);
+  font-size: 13px;
+}
+
+#custom-brightness{
+  padding: 0px 10px; /*temp*/
+  background-color: rgb(1, 103, 23);
+  font-size: 13px;
+}
+
+#battery{
+  padding: 0px 10px; /*temp*/
+  background-color: rgb(10, 189, 49);;
+  font-size: 13px;
+}

@@ -1,17 +1,24 @@
 function watchtime(){
-  hours=$(uptime -p | cut -d ' ' -f 2); minutes=$(uptime -p | cut -d ' ' -f 4);
-  minutes=${minutes//" "};
+  if [[ "$(uptime -p | cut -d ' ' -f 3)" -eq "minutes" ]]; then
+    minutes=$(uptime -p | cut -d ' ' -f 2);
+    if (( minutes < 10 ));then
+      minutes=$(echo "0${minutes}");
+    fi
+    echo "00:${minutes}";
+  else
+    hours=$(uptime -p | cut -d ' ' -f 2); minutes=$(uptime -p | cut -d ' ' -f 4);
+    minutes=${minutes//" "};
 
-  if (( hours < 10 )); then 
-    hours=$(echo "0${hours}");
+    if (( hours < 10 )); then 
+      hours=$(echo "0${hours}");
+    fi
+
+    if (( minutes < 10 )); then 
+      minutes=$(echo "0${minutes}");
+    fi
+    echo "${hours}:${minutes}";
   fi
 
-  if (( minutes < 10 )); then 
-    minutes=$(echo "0${minutes}");
-  fi
-
-
-  echo "${hours}:${minutes}";
-}
+  }
 
 watchtime;
