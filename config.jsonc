@@ -1,33 +1,51 @@
-{
+[{
   "position": "top",
   "output":"eDP-1",
   "name":"hello",
   
   "modules-left":[
-    "sway/workspaces", 
-    "sway/window"
+    "custom/triangle-transparent-to-green",
+    "sway/workspaces",
+    "custom/triangle-green-to-transparent",
+    "sway/window",
+    "custom/triangle-transparent-to-transparent"
   ],
 
   "modules-center":[
     "sway/language", 
-    "temperature", 
-    "memory", 
+    "custom/triangle-transparent-to-dark-green",
+    "temperature",
+    "custom/triangle-dark-green-to-green",
+    "memory",
+    "custom/triangle-green-to-green-lite-2",
     "cpu", 
 
+    "custom/triangle-green-lite-to-transparent",
+    "custom/triangle-transparent-to-green-yellow",
     "custom/archlogo",
+    "custom/triangle-green-yellow-to-transparent",
+    "custom/triangle-transparent-to-lite-green",
 
     "clock",
+    "custom/triangle-green-lite-to-green",
     "custom/timewatch",
+    "custom/triangle-green-to-dark-green",
     "network",
     "bluetooth",
-    "custom/notification"
+    "custom/notification",
+    "custom/triangle-dark-green-to-transparent"
   ],
   
   "modules-right":[
+    "custom/triangle-transparent-to-dark-green",
     "pulseaudio",
+    "custom/triangle-dark-green-to-green",
     "custom/brightness",
-    "battery"
+    "custom/triangle-green-to-green-lite",
+    "battery",
+    "custom/triangle-green-lite-to-transparent-2"
   ],
+  
 
 
   // workspaces 
@@ -50,7 +68,7 @@
 
   "sway/window":{
     "format":"{title}",
-    "max-length":28,
+    "max-length":15,
     "separate-outputs":true,
     "fallback":"Nothing",
     "icon":true,
@@ -192,7 +210,7 @@
   // notification
 
   "custom/notification":{
-    "format":""
+    "format":""
   },
 
 
@@ -219,7 +237,7 @@
     "hide-empty-text":true,
     "interval":40,
     "format":"{icon} {percentage}%",
-    "format-icons":["🌑", "🌘", "🌗", "🌖", "🌕"]
+    "format-icons":["<span color='#fdee00'>🌕</span>", "<span color='#fdee00'>🌘</span>", "<span color='#fdee00'>🌗</span>", "<span color='#fdee00'>🌖</span>", "<span color='#fdee00'>🌑</span>"]
   },
 
   // battery
@@ -242,6 +260,74 @@
       "󰂂",
       "󱟢"
     ]
+  },
+
+
+  "custom/triangle-green-to-green-lite":{
+    "format":"    "
+  },
+
+  "custom/triangle-dark-green-to-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-to-dark-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-lite-to-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-transparent-to-lite-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-yellow-to-transparent":{
+    "format":"    "
+  },
+
+  "custom/triangle-transparent-to-green-yellow":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-lite-to-transparent":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-to-green-lite-2":{
+    "format":"    "
+  },
+
+  "custom/triangle-transparent-to-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-to-transparent":{
+    "format":"    "
+  },
+
+  "custom/triangle-transparent-to-dark-green":{
+    "format":"    "
+  },
+
+  "custom/triangle-dark-green-to-transparent":{
+    "format":"    "
+  },
+
+  "custom/triangle-green-lite-to-transparent-2":{
+    "format":"    "
+  },
+
+  "custom/triangle-transparent-to-transparent":{
+    "format":"    "
   }
 
+},
+
+{
+  "position": "right",
+  "output":"eDP-1",
+  "name":"hello"
 }
+]

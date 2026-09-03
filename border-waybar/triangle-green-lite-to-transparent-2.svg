@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="80" height="100" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="0,0 0,100 80,50" fill="rgb(10, 189, 49)"></polygon>
+
+  <line x1="0" y1="0" x2="80" y2="50" style="stroke:rgba(59, 59, 59, 1);stroke-width:4" />
+  <line x1="0" y1="100" x2="80" y2="50" style="stroke:rgba(59, 59, 59, 1);stroke-width:4" />
+
+  <line x1="10" y1="6" x2="0" y2="6" style="stroke:rgba(59, 59, 59, 1);stroke-width:4" />
+  <line x1="10" y1="94" x2="0" y2="94" style="stroke:rgba(59, 59, 59, 1);stroke-width:4" />
+</svg>
