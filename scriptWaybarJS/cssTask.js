@@ -1,6 +1,7 @@
 const fs = require("fs");
+const path = require("path");
 
-fs.readFile("data.js", "utf8", (err, data) => {
+fs.readFile(path.join(__dirname, 'data.js'), "utf8", (err, data) => {
   if (err) {
     console.error("Error reading file:", err);
     return;
@@ -15,7 +16,7 @@ fs.readFile("data.js", "utf8", (err, data) => {
     }
   });
 
-  fs.readFile("../style_int.css", "utf8", (err, data) => {
+  fs.readFile(path.join(__dirname, '..', 'style_int.css'), "utf8", (err, data) => {
     let cssFile = data;
 
     objectTaskPending.forEach((element, index) => {

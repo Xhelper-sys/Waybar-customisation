@@ -1,6 +1,7 @@
 const fs = require("fs");
+const path = require("path");
 
-fs.readFile("data.js", "utf8", (err, data) => {
+fs.readFile(path.join(__dirname, 'data.js'), "utf8", (err, data) => {
   if (err) {
     console.error("Error reading file:", err);
     return;
@@ -15,7 +16,7 @@ fs.readFile("data.js", "utf8", (err, data) => {
     }
   });
 
-  fs.readFile("../config_int.jsonc", "utf8", (err, data) => {
+  fs.readFile(path.join(__dirname, '..', 'config_int.jsonc'), "utf8", (err, data) => {
     const waybar = JSON.parse(data);
 
     objectTaskPending.forEach((element, index) => {
@@ -23,7 +24,8 @@ fs.readFile("data.js", "utf8", (err, data) => {
       waybar[1][`custom/laTache${index}`] = {
           "format": element.description,
           "max-length": 35,
-          "min-length": 34
+          "min-length": 34,
+          "align":0
         }
     });
 
